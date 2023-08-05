@@ -1,0 +1,44 @@
+.input-item{
+    width: 70%;
+    background-color: #333; /* Cor de fundo escura suave */
+    color: white; /* Cor do texto em branco */
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ffd700; /* Borda dourada */
+    border-radius: 5px; 
+}
+.input-container{
+    width: 70%;
+
+}
+.send-button{
+    border: 1px solid gold;
+    background-color: #333;
+    color: gold;
+    border-radius: 5rem;
+    cursor:pointer;
+}
+
+.suggestion{
+    background-color: transparent;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    color: gold
+}
+
+.div-suggestion{
+    cursor: pointer;
+    margin: 1rem 0;
+    border: 1px solid gold;
+    color: white;
+}
+
+.suggestions-container {
+    position: fixed;
+    width: 50%;
+    max-height: 300px; /* Defina a altura máxima que você deseja para o container */
+    overflow-y: auto; /* Isso exibirá uma barra de rolagem vertical quando necessário */
+    background-color: #333;
+    padding: 0 2rem;
+}
