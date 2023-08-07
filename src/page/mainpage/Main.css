@@ -1,44 +1,78 @@
-.input-item{
-    width: 70%;
-    background-color: #333; /* Cor de fundo escura suave */
-    color: white; /* Cor do texto em branco */
-    font-size: 16px;
-    padding: 10px;
-    border: 2px solid #ffd700; /* Borda dourada */
-    border-radius: 5px; 
-}
-.input-container{
-    width: 70%;
-
-}
-.send-button{
-    border: 1px solid gold;
-    background-color: #333;
-    color: gold;
-    border-radius: 5rem;
-    cursor:pointer;
+.background {
+  background-color: rgba(28, 28, 28, 0.324);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100vh; Remova essa propriedade para que a altura seja determinada pelo conteúdo */
+  position: relative;
+  overflow: auto; /* Adicione overflow: auto; para permitir que a página role quando necessário */
+  max-height: 100vh; /* Defina a altura máxima para ocupar a altura da tela */
 }
 
-.suggestion{
-    background-color: transparent;
-    width: 100%;
-    outline: 0;
-    border: 0;
-    color: gold
+.input-item {
+  width: 70%;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border: 2px solid #ffd700;
+  border-radius: 5px;
 }
 
-.div-suggestion{
-    cursor: pointer;
-    margin: 1rem 0;
-    border: 1px solid gold;
-    color: white;
+.input-container {
+  width: 70%;
+}
+
+.input-container input {
+  outline: 0;
+}
+
+.send-button {
+  border: 1px solid gold;
+  background-color: #333;
+  color: gold;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.suggestion {
+  background-color: transparent;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  color: gold;
+}
+
+.div-suggestion {
+  cursor: pointer;
+  margin: 1rem 0;
+  border: 1px solid gold;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .suggestions-container {
-    position: fixed;
-    width: 50%;
-    max-height: 300px; /* Defina a altura máxima que você deseja para o container */
-    overflow-y: auto; /* Isso exibirá uma barra de rolagem vertical quando necessário */
-    background-color: #333;
-    padding: 0 2rem;
+  position: fixed;
+  z-index: 8;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #333;
+  width: 100%;
+  margin-top: 0.5rem;
+  max-width: 70%;
+  /* Adicionando a propriedade max-width para limitar o tamanho */
+}
+.guesses-container {
+  /* Adicione essas propriedades para fixar a lista de guesses logo abaixo do input-container */
+  width: 100%;
+  position: relative;
+  /* Remova o max-height, permitindo que o guesses-container cresça com o conteúdo */
+  z-index: 1;
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1; /* Adicione a propriedade flex: 1; para que o guesses-container cresça e ocupe o espaço disponível */
 }

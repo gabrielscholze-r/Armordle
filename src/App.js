@@ -13,9 +13,11 @@ function App() {
 
   return (
     <div className="App">
+      <div className="w-100">
+      
+      <Main sortedItem={sortItem()} dataEn={dataEn}/>
 
-      <h1>BUILDLE</h1>
-      <Main sortedItem={sortItem} dataEn={dataEn} />
+      </div>
     </div>
   );
 }
