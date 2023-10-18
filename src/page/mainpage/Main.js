@@ -48,40 +48,45 @@ export default function Main({ sortedItem, dataEn }) {
   };
 
   return (
-    <div className="background justify-content-center align-items-center text-center">
-      
-      <div className="input-group input-group-sm mb-3">
-         <h1 className='mx-auto'>BUILDLE</h1>
-        <div className='mx-auto w-100'>
-          {won ? (
+    <div className="background justify-content-center text-center">
+
+      <div className="input-group input-group-sm">
+        <div className="mx-auto w-100">
+          <h1 className='mx-auto'>BUILDLE</h1>
+          <div className='mx-auto w-100 input mt-auto'>
+            {won ? (
+              <div>
+                Parabéns, você acertou! O item era {sorted.name}
+              </div>
+            ) : ''}
             <div>
-              Parabéns, você acertou! O item era {sorted.name}
+            <div className="input-container mx-auto pt-5 my-auto">
+              <input
+                type="text"
+                className="input-item p-2"
+                placeholder='Type an item...'
+                value={guess}
+                onChange={(e) => handleInputChange(e)}
+              />
+              <UilMessage className="send-button p-2 rounded m-2" onClick={() => makeGuess(guess)} size='70' />
             </div>
-          ) : ''}
-          <div className="input-container mx-auto py-5">
-            <input
-              type="text"
-              className="input-item p-2"
-              placeholder='Type an item...'
-              value={guess}
-              onChange={(e) => handleInputChange(e)}
-            />
-            <UilMessage className="send-button p-2 rounded m-2" onClick={() => makeGuess(guess)} size='70' />
-            <div className="suggestions-container">
+
+            <div className="suggestions-container mx-auto">
               {guess !== '' ? suggestions.map((suggestion, index) => (
                 <div className='align-items-center d-flex div-suggestion' onClick={() => selectSuggestion(suggestion)} key={index}>
-                  <img src={`http://ddragon.leagueoflegends.com/cdn/13.15.1/img/item/${suggestion.image.full}`} style={{ width: '48px', height: '48px' }} alt="" />
+                  <img src={`http://ddragon.leagueoflegends.com/cdn/13.15.1/img/item/${suggestion.id}.png`} style={{ width: '48px', height: '48px' }} alt="" />
                   <button key={index} className="suggestion py-2 m-auto" >{suggestion.name}</button>
                 </div>
               )) : ''}
             </div>
+            </div>
           </div>
         </div>
-      <div className="guesses-container mx-auto">
-              {guesses.map((item, index) => (
-                <Item key={index} itemData={item} />
-              ))}
-            </div>
+        <div className="guesses-container mx-auto">
+          {guesses.map((item, index) => (
+            <Item key={index} itemData={item} />
+          ))}
+        </div>
       </div>
     </div>
   );

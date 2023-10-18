@@ -1,13 +1,17 @@
 .background {
-  background-color: rgba(28, 28, 28, 0.324);
+  background-image: linear-gradient(to right, rgba(9, 20, 40,0.8), rgba(10, 20, 40,0.8));
   justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* height: 100vh; Remova essa propriedade para que a altura seja determinada pelo conteúdo */
+  height: 100vh;
   position: relative;
-  overflow: auto; /* Adicione overflow: auto; para permitir que a página role quando necessário */
-  max-height: 100vh; /* Defina a altura máxima para ocupar a altura da tela */
+  overflow: auto;
+}
+
+.input-group {
+  padding-top: 10%;
+  overflow-y: auto;
 }
 
 .input-item {
@@ -21,7 +25,7 @@
 }
 
 .input-container {
-  width: 70%;
+  width: 80%;
 }
 
 .input-container input {
@@ -56,23 +60,15 @@
 }
 
 .suggestions-container {
-  position: fixed;
-  z-index: 8;
-  max-height: 200px;
+  position: relative;
   overflow-y: auto;
+  margin-top:-22px;
+  /* max-height: 280px; */
   background-color: #333;
   width: 100%;
-  margin-top: 0.5rem;
-  max-width: 70%;
-  /* Adicionando a propriedade max-width para limitar o tamanho */
+
 }
-.guesses-container {
-  /* Adicione essas propriedades para fixar a lista de guesses logo abaixo do input-container */
-  width: 100%;
-  position: relative;
-  /* Remova o max-height, permitindo que o guesses-container cresça com o conteúdo */
-  z-index: 1;
-  display: flex;
-  flex-direction: column-reverse;
-  flex: 1; /* Adicione a propriedade flex: 1; para que o guesses-container cresça e ocupe o espaço disponível */
+
+.input {
+  height: 50vh;
 }
