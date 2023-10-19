@@ -84,7 +84,7 @@ export default function Main({ sortedItem, dataEn }) {
                 value={guess}
                 onChange={(e) => handleInputChange(e)}
               />
-             <i class="bi bi-chevron-right send-button"></i>
+             <i class="bi bi-chevron-right send-button" onClick={()=>makeGuess(guess)}></i>
             </div>
 
             <div className="suggestions-container mx-auto d-flex justify-content-center">
