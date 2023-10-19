@@ -68,8 +68,8 @@
 }
 
 .suggestions-padded {
-  margin-right: 53px;
-  width: 70%;
+  /* margin-right: 53px; */
+  width: 100%;
   background-color: #1E282D;
   max-height: 280px;
   overflow-y: auto;

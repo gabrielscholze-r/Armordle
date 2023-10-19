@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Item from '../../components/item/Item';
+import Item0 from '../../data/assets/img/item0.png'
+import Item1 from '../../data/assets/img/item1.png'
+import Item2 from '../../data/assets/img/item2.png'
+import Item3 from '../../data/assets/img/item3.png'
+import Item4 from '../../data/assets/img/item4.png'
 import './Main.css';
-import { UilMessage } from '@iconscout/react-unicons';
 
 export default function Main({ sortedItem, dataEn }) {
   const [sorted, setSorted] = useState(sortedItem);
@@ -10,9 +14,8 @@ export default function Main({ sortedItem, dataEn }) {
   const [guess, setGuess] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [won, setWon] = useState(false);
-
   useEffect(() => { console.log(sorted) }, [])
-
+  
   const makeGuess = (g) => {
     setGuess('')
     setSuggestions([])
@@ -27,7 +30,20 @@ export default function Main({ sortedItem, dataEn }) {
       }
     }
   };
-
+  const getImage = (sprite)=>{
+    switch(sprite){
+      case "item0.png":
+        return Item0;
+      case "item1.png":
+        return Item1;
+      case "item2.png":
+        return Item2;
+      case "item3.png":
+        return Item3;
+      case "item4.png":
+        return Item4;
+    }
+  }
   const selectSuggestion = (suggestion) => {
     setGuess(suggestion.name)
     setSuggestions([]);
@@ -74,15 +90,28 @@ export default function Main({ sortedItem, dataEn }) {
             <div className="suggestions-container mx-auto d-flex justify-content-center">
               <div className="suggestions-padded">
                 {guess !== '' ? suggestions.map((suggestion, index) => (
-                  
-                    <div className='div-suggestion' onClick={() => selectSuggestion(suggestion)} key={index}>
-                      <img src={`http://ddragon.leagueoflegends.com/cdn/13.15.1/img/item/${suggestion.id}.png`} style={{ width: '48px', height: '48px' }} alt="" />
+                    
+                      
+                    <div className='div-suggestion' onClick={() => selectSuggestion(suggestion)}>
+                      <div 
+                        className='div-suggestion' 
+                        onClick={() => selectSuggestion(suggestion)} 
+                        key={index} 
+                        style={{
+                          position: 'relative',
+                          width: '48px',
+                          height: '48px',
+                          backgroundImage: `url(${getImage(suggestion.image.sprite)})`,
+                          backgroundPosition: `-${suggestion.image.x}px -${suggestion.image.y}px`,
+                        }}
+                      ></div>
+
                       <button key={index} className="suggestion py-2 m-auto" >{suggestion.name}</button>
                     </div>
                   
                 )) : ''}
                 </div>
-            </div>
+
             </div>
           </div>
         </div>
@@ -92,6 +121,7 @@ export default function Main({ sortedItem, dataEn }) {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 }
