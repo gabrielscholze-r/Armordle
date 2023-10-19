@@ -10,7 +10,6 @@
 }
 
 .input-group {
-  padding-top: 10%;
   overflow-y: auto;
 }
 
@@ -56,19 +55,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0;
+  width: 100%;
+}
+
+.suggestions-padded {
+  margin-right: 82px;
+  width: 70%;
+  background-color: #333;
+  max-height: 280px;
+  overflow-y: auto;
 }
 
 .suggestions-container {
   position: relative;
-  overflow-y: auto;
+  
   margin-top:-22px;
-  /* max-height: 280px; */
-  background-color: #333;
-  width: 100%;
+  
+  
+  width: 80%;
 
 }
 
 .input {
-  height: 50vh;
+  min-height: 50vh;
 }

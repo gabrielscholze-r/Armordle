@@ -52,7 +52,7 @@ export default function Main({ sortedItem, dataEn }) {
 
       <div className="input-group input-group-sm">
         <div className="mx-auto w-100">
-          <h1 className='mx-auto'>BUILDLE</h1>
+          <h1 className='mx-auto'>BUIDLE</h1>
           <div className='mx-auto w-100 input mt-auto'>
             {won ? (
               <div>
@@ -71,13 +71,17 @@ export default function Main({ sortedItem, dataEn }) {
               <UilMessage className="send-button p-2 rounded m-2" onClick={() => makeGuess(guess)} size='70' />
             </div>
 
-            <div className="suggestions-container mx-auto">
-              {guess !== '' ? suggestions.map((suggestion, index) => (
-                <div className='align-items-center d-flex div-suggestion' onClick={() => selectSuggestion(suggestion)} key={index}>
-                  <img src={`http://ddragon.leagueoflegends.com/cdn/13.15.1/img/item/${suggestion.id}.png`} style={{ width: '48px', height: '48px' }} alt="" />
-                  <button key={index} className="suggestion py-2 m-auto" >{suggestion.name}</button>
+            <div className="suggestions-container mx-auto d-flex justify-content-center">
+              <div className="suggestions-padded">
+                {guess !== '' ? suggestions.map((suggestion, index) => (
+                  
+                    <div className='div-suggestion' onClick={() => selectSuggestion(suggestion)} key={index}>
+                      <img src={`http://ddragon.leagueoflegends.com/cdn/13.15.1/img/item/${suggestion.id}.png`} style={{ width: '48px', height: '48px' }} alt="" />
+                      <button key={index} className="suggestion py-2 m-auto" >{suggestion.name}</button>
+                    </div>
+                  
+                )) : ''}
                 </div>
-              )) : ''}
             </div>
             </div>
           </div>
