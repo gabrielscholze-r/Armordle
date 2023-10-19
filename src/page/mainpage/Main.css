@@ -1,26 +1,29 @@
 .background {
   background-image: linear-gradient(to right, rgba(9, 20, 40,0.8), rgba(10, 20, 40,0.8));
   justify-content: center;
-  display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
   position: relative;
   overflow: auto;
 }
-
+.title{
+  font-family: Beaufort-Bold;
+  font-size: 40px;
+}
 .input-group {
   overflow-y: auto;
+  margin-top: 15vh;
 }
 
 .input-item {
+  font-family: 'Beaufort-Medium';
   width: 70%;
-  background-color: #333;
+  background-color: #1E282D;
   color: white;
   font-size: 16px;
   padding: 10px;
-  border: 2px solid #ffd700;
-  border-radius: 5px;
+  border: 2px solid #C89B3C;
 }
 
 .input-container {
@@ -32,25 +35,30 @@
 }
 
 .send-button {
-  border: 1px solid gold;
-  background-color: #333;
-  color: gold;
-  border-radius: 5rem;
+  border: 1px solid #C89B3C;
+  background-color: #1E282D;
+  color: #C89B3C;
   cursor: pointer;
+  font-size: 28px;
+  margin-left: 10px;
+  width: 5%;
+  transition: 0.2s;
 }
-
+.send-button:hover{
+  opacity: 0.7;
+}
 .suggestion {
   background-color: transparent;
   width: 100%;
   outline: 0;
   border: 0;
-  color: gold;
+  color: #C89B3C;
 }
 
 .div-suggestion {
   cursor: pointer;
   margin: 1rem 0;
-  border: 1px solid gold;
+  border: 1px solid #C89B3C;
   color: white;
   display: flex;
   align-items: center;
@@ -60,21 +68,16 @@
 }
 
 .suggestions-padded {
-  margin-right: 82px;
+  margin-right: 53px;
   width: 70%;
-  background-color: #333;
+  background-color: #1E282D;
   max-height: 280px;
   overflow-y: auto;
 }
 
 .suggestions-container {
   position: relative;
-  
-  margin-top:-22px;
-  
-  
   width: 80%;
-
 }
 
 .input {

@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family:'Beaufort-Bold' ;
+  src: local('Beaufort-Bold'), url('./data/assets/fonts/BeaufortforLOL-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family:'Beaufort-Medium' ;
+  src: local('Beaufort-Medium'), url('./data/assets/fonts/BeaufortforLOL-Medium.otf') format('opentype');
+}

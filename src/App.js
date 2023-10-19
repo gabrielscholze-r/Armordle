@@ -3,6 +3,7 @@ import './App.css';
 import dataenus from './data/DATA_enus.json'
 import { useState } from 'react';
 import Main from './page/mainpage/Main';
+import "bootstrap-icons/font/bootstrap-icons.css";
 function App() {
   const [dataEn, setEn] = useState(dataenus)
   // const [dataPt, setPt] = useState(getDataPt())

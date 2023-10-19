@@ -52,7 +52,7 @@ export default function Main({ sortedItem, dataEn }) {
 
       <div className="input-group input-group-sm">
         <div className="mx-auto w-100">
-          <h1 className='mx-auto'>BUIDLE</h1>
+          <h1 className='mx-auto title'>BUIDLE</h1>
           <div className='mx-auto w-100 input mt-auto'>
             {won ? (
               <div>
@@ -60,7 +60,7 @@ export default function Main({ sortedItem, dataEn }) {
               </div>
             ) : ''}
             <div>
-            <div className="input-container mx-auto pt-5 my-auto">
+            <div className=" d-flex align-items-center justify-content-center input-container mx-auto pt-5 my-auto">
               <input
                 type="text"
                 className="input-item p-2"
@@ -68,7 +68,7 @@ export default function Main({ sortedItem, dataEn }) {
                 value={guess}
                 onChange={(e) => handleInputChange(e)}
               />
-              <UilMessage className="send-button p-2 rounded m-2" onClick={() => makeGuess(guess)} size='70' />
+             <i class="bi bi-chevron-right send-button"></i>
             </div>
 
             <div className="suggestions-container mx-auto d-flex justify-content-center">
