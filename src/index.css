@@ -19,3 +19,7 @@ code {
   font-family:'Beaufort-Medium' ;
   src: local('Beaufort-Medium'), url('./data/assets/fonts/BeaufortforLOL-Medium.otf') format('opentype');
 }
+@font-face {
+  font-family:'Beaufort-Regular' ;
+  src: local('Beaufort-Regular'), url('./data/assets/fonts/BeaufortforLOL-Regular.otf') format('opentype');
+}
